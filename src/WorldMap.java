@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  * This class provides functionality to draw the graphical world map during a
- * Darwin simulation. Before any other operations can be performed, the starting
+ * Bug Fight simulation. Before any other operations can be performed, the starting
  * map must be initialized by calling WorldMap.initialize(width, height).
  */
 public class WorldMap {
@@ -144,30 +144,20 @@ public class WorldMap {
      * WorldMap class and not visible outside.
      */
     private static class WorldMapImpl extends JPanel {
-
         private static final long serialVersionUID = 0L;
-
         private static final int SQUARE_SIZE = 22;
-
         private static final int INSET = 10;
-
         private int width, height; // size of board
-
         private Cell[][] board; // the board
-
         private static final Font font = new Font("Roman", 0, 10);
 
         /**
          * Info about one cell on the board
          */
         private static class Cell {
-
             private char c = ' ';
-
             private Direction dir = null;
-
             private Color color = Color.BLACK;
-
         }
 
         private WorldMapImpl(int w, int h) {
@@ -188,18 +178,15 @@ public class WorldMap {
                     board[i][j] = new Cell();
                 }
             }
-
-            JFrame f = new JFrame("Darwin");
+            JFrame f = new JFrame("Bug Fight");
             f.setSize(new Dimension(2 * INSET + SQUARE_SIZE * (w + 1) + 10,
                     2 * INSET + SQUARE_SIZE * (h + 1) + 10));
             f.addWindowListener(new WindowAdapter() {
-
                     @Override
                     public void windowClosing(WindowEvent e) {
                         System.exit(0);
                     }
                 });
-
             f.getContentPane().add(this, BorderLayout.CENTER);
             f.setVisible(true);
             f.setResizable(false);

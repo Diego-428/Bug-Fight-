@@ -114,8 +114,6 @@ public class Species {
                 // add label to the Arraylist
                 storage.add(ints);
             }
-
-
             else if(splitLine.length == 1){
 
                 // if the splitline array only has one element, make an instruction out of it and add to arraylist
@@ -131,9 +129,7 @@ public class Species {
             }
 
         }
-
         return storage;
-
     }
 
     /**
@@ -201,14 +197,11 @@ public class Species {
         String textualRepresentation = "";
         textualRepresentation += "[";
         for (int i = 0; i < program.size(); i++) {
-
             if (i == program.size()- 1){
                 textualRepresentation += program.get(i).getLabel();
                 break;
             }
-
             textualRepresentation += program.get(i).getLabel() + ", ";
-
         }
         textualRepresentation += "]";
         return textualRepresentation;
@@ -216,16 +209,6 @@ public class Species {
 
     public ArrayList<Instruction> getProgram() {
         return program;
-    }
-
-    /**
-     * Tests the functionality of the Species class.
-     */
-    public static void main(String[] s) {
-
-        Species someTestCase = new Species("species/Food.txt", Color.BLACK);
-
-        System.out.println(someTestCase.program);
     }
 
 }
