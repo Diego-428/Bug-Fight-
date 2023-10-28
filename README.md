@@ -17,3 +17,4 @@ This program makes use of the key features of object-oriented programming. All a
 ![example1](https://github.com/Diego-428/Bug-Fight-/blob/main/images/hop%20image.png?raw=true)
 
 ## Creature Sample Instruction
+![example2](https://github.com/Diego-428/Bug-Fight-/blob/main/images/hop%20instruction.png?raw=true)
